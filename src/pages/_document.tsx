@@ -1,13 +1,22 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html
+      lang="en"
+      style={{
+        backgroundColor: "#1b1b1b",
+      }}
+    >
       <Head />
-      <body>
+      <body
+        style={{
+          overflow: "hidden",
+        }}
+      >
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
