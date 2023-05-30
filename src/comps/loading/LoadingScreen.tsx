@@ -4,30 +4,27 @@ import s from "./LoadingScreen.module.css";
 
 const LoadingScreen = () => {
   useEffect(() => {
-    const complete = document.readyState === "complete";
-    if (complete) {
-      const loadingScreen = document.getElementById("loadingScreen");
-      if (loadingScreen) {
-        setTimeout(() => {
-          const fadeOut = loadingScreen.animate(
-            [
-              {
-                opacity: 1,
-              },
-              {
-                opacity: 0,
-              },
-            ],
+    const loadingScreen = document.getElementById("loadingScreen");
+    if (loadingScreen) {
+      setTimeout(() => {
+        const fadeOut = loadingScreen.animate(
+          [
             {
-              duration: 1000,
-              fill: "forwards",
-            }
-          );
-          fadeOut.onfinish = () => {
-            loadingScreen.remove();
-          };
-        }, 2500);
-      }
+              opacity: 1,
+            },
+            {
+              opacity: 0,
+            },
+          ],
+          {
+            duration: 1000,
+            fill: "forwards",
+          }
+        );
+        fadeOut.onfinish = () => {
+          loadingScreen.remove();
+        };
+      }, 2500);
     }
   }, []);
   return (
