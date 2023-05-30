@@ -56,7 +56,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
         // flip to left side
         .to(pos, {
           y: 0,
-          x: -550,
+          x: -450,
         })
         .to(
           rot,
@@ -69,7 +69,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
 
         // wheel to right side
         .to(pos, {
-          x: 550,
+          x: 450,
         })
         .to(
           rot,
