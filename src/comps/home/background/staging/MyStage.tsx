@@ -3,12 +3,12 @@ import MyEnv from "./MyEnv";
 import MyShadows from "./MyShadows";
 import MySky from "./MySky";
 
-const MyStage = () => {
+const MyStage = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <>
-      <MyEnv />
-      <MyShadows />
-      <MySky />
+      <MyEnv isMobile={isMobile} />
+      <MyShadows isMobile={isMobile} />
+      <MySky isMobile={isMobile} />
     </>
   );
 };
