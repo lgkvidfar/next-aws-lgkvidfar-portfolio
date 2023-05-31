@@ -9,16 +9,9 @@ const vt = VT323({
 });
 
 export default function Home() {
-  const pageRef = useRef(null);
-
   return (
-    <main
-      ref={pageRef}
-      style={vt.style}
-      className={`relative flex h-full w-full flex-col items-center justify-center`}
-    >
+    <main style={vt.style} className={`h-[3000vh] w-full`}>
       <Background />
-      <div className="h-[3000vh] w-full"></div>
     </main>
   );
 }

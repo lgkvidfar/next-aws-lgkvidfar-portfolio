@@ -64,7 +64,7 @@ export function Avatar(props: JSX.IntrinsicElements["group"] | any) {
   const { animations: idleFalling } = useFBX("/anims/Idle_Falling.fbx");
   idleFalling[0].name = "IdleFalling";
 
-  const { actions } = useAnimations(
+  const { actions }: any = useAnimations(
     [
       typingAnim[0],
       capoAnim[0],

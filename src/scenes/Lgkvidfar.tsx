@@ -20,7 +20,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
+export function Lgkvidfar({ isMobile }: { isMobile: boolean }) {
   const { nodes } = useGLTF("/models/lgkvidfar-transformed.glb") as GLTFResult;
 
   const meshRef = useRef<THREE.Mesh>(null);
@@ -44,7 +44,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
       tlRef.current
         //flip to top
         .to(pos, {
-          y: 250,
+          y: isMobile ? 450 : 250,
         })
         .to(
           rot,
@@ -56,7 +56,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
         // flip to left side
         .to(pos, {
           y: 0,
-          x: -450,
+          x: isMobile ? -250 : -450,
         })
         .to(
           rot,
@@ -69,7 +69,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
 
         // wheel to right side
         .to(pos, {
-          x: 450,
+          x: isMobile ? 250 : 450,
         })
         .to(
           rot,
@@ -83,7 +83,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
         // return to center
         .to(pos, {
           x: 0,
-          y: 0,
+          y: isMobile ? -50 : 0,
         })
         .to(
           rot,
@@ -109,7 +109,7 @@ export function Lgkvidfar(props: JSX.IntrinsicElements["group"]) {
   }, []);
 
   return (
-    <group position={[0, 0, 1]} {...props} dispose={null}>
+    <group position={[0, 0, 1]} dispose={null}>
       <group scale={0.01}>
         <mesh ref={meshRef} geometry={nodes.Text.geometry}>
           <MeshTransmissionMaterial

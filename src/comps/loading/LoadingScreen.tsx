@@ -23,6 +23,7 @@ const LoadingScreen = () => {
         );
         fadeOut.onfinish = () => {
           loadingScreen.remove();
+          document.body.style.overflow = "auto";
         };
       }, 2500);
     }
