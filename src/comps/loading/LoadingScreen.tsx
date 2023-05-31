@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 import s from "./LoadingScreen.module.css";
 
@@ -27,11 +27,12 @@ const LoadingScreen = () => {
       }, 2500);
     }
   }, []);
+
   return (
     <div id="loadingScreen" className={s.section}>
       <section className={s.container}>
         <div className={s.loaderOuter}>
-          <div className={s.loaderInner} />
+          <div className={s.loaderInner}></div>
         </div>
       </section>
     </div>

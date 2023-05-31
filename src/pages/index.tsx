@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { VT323 } from "next/font/google";
-import Background from "@/comps/background/Background";
+import Background from "@/comps/home/background/Background";
 
 const vt = VT323({
   display: "swap",
