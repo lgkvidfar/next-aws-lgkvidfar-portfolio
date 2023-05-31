@@ -22,7 +22,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Track(props: JSX.IntrinsicElements["group"]) {
-  const result = useLoader(GLTFLoader, "/models/car/track.glb");
+  const result: any = useLoader(GLTFLoader, "/models/car/track.glb");
 
   const colorMap = useLoader(TextureLoader, "/textures/car/track.png");
 
