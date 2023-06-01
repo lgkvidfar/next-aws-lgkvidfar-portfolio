@@ -10,7 +10,7 @@ const vt = VT323({
 
 export default function Home() {
   return (
-    <main style={vt.style} className={`h-[3000vh] w-full`}>
+    <main style={vt.style} className={`h-[1000vh] w-full lg:h-[3000vh]`}>
       <Background />
     </main>
   );

@@ -112,22 +112,30 @@ export function Lgkvidfar({ isMobile }: { isMobile: boolean }) {
     <group position={[0, 0, 1]} dispose={null}>
       <group scale={0.01}>
         <mesh ref={meshRef} geometry={nodes.Text.geometry}>
-          <MeshTransmissionMaterial
-            color={"#f5f5f5"}
-            distortionScale={1}
-            temporalDistortion={1}
-            transmission={0.75}
-            metalness={0.5}
-            roughness={0.1}
-            clearcoat={0.5}
-            clearcoatRoughness={0.5}
-            envMapIntensity={0.5}
-            opacity={0.5}
-            transparent={true}
-            side={DoubleSide}
-            ior={1}
-            thickness={1}
-          />
+          {isMobile ? (
+            <meshStandardMaterial
+              color={"#f5f5f5"}
+              metalness={0.5}
+              roughness={0.1}
+            />
+          ) : (
+            <MeshTransmissionMaterial
+              color={"#f5f5f5"}
+              distortionScale={1}
+              temporalDistortion={1}
+              transmission={0.75}
+              metalness={0.5}
+              roughness={0.1}
+              clearcoat={0.5}
+              clearcoatRoughness={0.5}
+              envMapIntensity={0.5}
+              opacity={0.5}
+              transparent={true}
+              side={DoubleSide}
+              ior={1}
+              thickness={1}
+            />
+          )}
         </mesh>
       </group>
     </group>

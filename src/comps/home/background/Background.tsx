@@ -1,4 +1,4 @@
-import { Lgkvidfar } from "@/scenes/Lgkvidfar";
+import { Lgkvidfar } from "@/comps/home/background/Lgkvidfar";
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import MyStage from "./staging/MyStage";
